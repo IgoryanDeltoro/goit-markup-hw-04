@@ -9,6 +9,7 @@
 /* accent color   #2196F3 */
 /* logo color  #2196F3 #000000 */
 /* border color #eeeeee */
+/* icon color #afb1b8*/
 
 :root {
   --main-text-color: #757575;
@@ -25,6 +26,7 @@
   --hero-bgc: #c4c4c4;
   --footer-bgc: #2f303a;
   --border-color: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -281,7 +283,8 @@ p {
 }
 
 .work .work-title,
-.team .team-title {
+.team .team-title,
+.title-customers {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -343,7 +346,8 @@ p {
   margin: 0 32px;
 }
 
-.team .item-icon {
+.team .item-icon,
+.footer .item-social {
   display: flex;
   width: 44px;
   height: 44px;
@@ -353,13 +357,14 @@ p {
   border-radius: 50%;
 }
 
-.team .item-icon:last-child {
+.team .item-icon:last-child,
+.footer .item-social:last-child {
   margin-right: 0;
 }
 
 .team .icon {
   display: flex;
-  fill: var(--main-text-color);
+  fill: var(--icon-color);
 }
 
 .team .item-icon:hover,
@@ -372,10 +377,61 @@ p {
   fill: var(--main-bgc-color);
 }
 
+/* regular customers  */
+
+.customers.section {
+  padding: 94px 0;
+}
+
+.customer .container {
+}
+
+.list-customers {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 30px;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-customers:last-child {
+  margin-right: 0;
+}
+
+.customers .icon {
+  fill: var(--icon-color);
+}
+
+.item-customers:hover .icon,
+.item-customers:focus .icon {
+  fill: var(--accent-focus-color);
+}
+
+.item-customers:hover,
+.item-customers:focus {
+  border: 1px solid var(--accent-focus-color);
+}
 /* footer --------------------------------------------*/
 
 .footer {
   padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer.bgc {
@@ -408,6 +464,43 @@ p {
 .footer .link:hover,
 .footer .link:focus {
   color: var(--accent-focus-color);
+}
+
+/* footer social */
+
+.footer-social {
+  margin-left: 70px;
+  margin-right: auto;
+}
+
+.footer .title-social {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+
+  color: var(--white-color);
+}
+
+.footer .list-social {
+  display: flex;
+}
+
+.footer .icon {
+  display: flex;
+  fill: var(--white-color);
+}
+
+.footer .item-social {
+  display: flex;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  cursor: pointer;
+}
+
+.footer .item-social:hover,
+.footer .item-social:focus {
+  background-color: var(--accent-focus-color);
 }
 
 /* PORTFOLIO OF THE NEXT SITE -/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
