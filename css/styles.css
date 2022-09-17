@@ -171,6 +171,14 @@ p {
   color: var(--accent-focus-color);
 }
 
+.header .link:active .icon {
+  color: var(--accent-focus-color);
+}
+
+.header .link:active {
+  color: var(--accent-focus-color);
+}
+
 /* hero ---------------------------------------*/
 .hero {
   max-width: 1600px;
@@ -341,17 +349,19 @@ p {
   text-align: center;
 }
 
-.team .list-icon {
+.team .list-icon,
+.list-social {
   display: flex;
-  margin: 0 32px;
+  justify-content: center;
+  gap: 10px;
 }
 
-.team .item-icon,
-.footer .item-social {
+.link-icon,
+.link-social {
   display: flex;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
+
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -367,14 +377,22 @@ p {
   fill: var(--icon-color);
 }
 
-.team .item-icon:hover,
-.team .item-icon:focus {
+.team .link-icon:hover .icon,
+.team .link-icon:focus .icon {
+  fill: var(--main-bgc-color);
+}
+
+.team .link-icon:hover,
+.team .link-icon:focus {
   background-color: var(--accent-focus-color);
 }
 
-.team .item-icon:hover .icon,
-.team .item-icon:focus .icon {
+.team .link-icon:active .icon {
   fill: var(--main-bgc-color);
+}
+
+.team .link-icon:active {
+  background-color: var(--accent-focus-color);
 }
 
 /* regular customers  */
@@ -383,21 +401,18 @@ p {
   padding: 94px 0;
 }
 
-.customer .container {
-}
-
 .list-customers {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.item-customers {
+.customers .link-customers {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-right: 30px;
   width: 170px;
   height: 92px;
 
@@ -406,23 +421,28 @@ p {
   cursor: pointer;
 }
 
-.item-customers:last-child {
-  margin-right: 0;
-}
-
 .customers .icon {
   fill: var(--icon-color);
 }
 
-.item-customers:hover .icon,
-.item-customers:focus .icon {
+.link-customers:hover .icon,
+.link-customers:focus .icon {
   fill: var(--accent-focus-color);
 }
 
-.item-customers:hover,
-.item-customers:focus {
+.link-customers:hover,
+.link-customers:focus {
   border: 1px solid var(--accent-focus-color);
 }
+
+.link-customers:active .icon {
+  fill: var(--accent-focus-color);
+}
+
+.link-customers:active {
+  border: 1px solid var(--accent-focus-color);
+}
+
 /* footer --------------------------------------------*/
 
 .footer {
@@ -436,11 +456,6 @@ p {
 
 .footer.bgc {
   background-color: var(--footer-bgc);
-}
-
-.footer .contact,
-.address-link {
-  display: block;
 }
 
 .second-container {
@@ -478,7 +493,7 @@ p {
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.17;
 
   color: var(--white-color);
 }
@@ -492,14 +507,18 @@ p {
   fill: var(--white-color);
 }
 
-.footer .item-social {
+.footer .link-social {
   display: flex;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
   cursor: pointer;
 }
 
-.footer .item-social:hover,
-.footer .item-social:focus {
+.footer .link-social:hover,
+.footer .link-social:focus {
+  background-color: var(--accent-focus-color);
+}
+
+.footer .link-social:active {
   background-color: var(--accent-focus-color);
 }
 
@@ -547,6 +566,9 @@ p {
 .filter-list .filter-btn:focus {
   color: var(--white-color);
   background-color: var(--accent-focus-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .filter-list .filter-btn:active {
@@ -580,6 +602,7 @@ p {
 }
 
 .project-link {
+  display: block;
   text-decoration: none;
   cursor: default;
 }
@@ -600,4 +623,10 @@ p {
   font-size: 16px;
   line-height: 1.8;
   color: var(--main-text-color);
+}
+
+.project .project-link:hover,
+.project .project-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
